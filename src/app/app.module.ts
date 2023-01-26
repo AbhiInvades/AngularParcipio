@@ -7,17 +7,23 @@ import { HomeComponent } from './home/home.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { InlineComponent } from './inline/inline.component';
 import { ManualComponent } from './manual_component/manual.component';
+import { SharedModule } from './shared/shared.module';
+import { DirectivesComponent } from './directives/directives.component';
+import { PipesComponent } from './pipes/pipes.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     NavbarComponent,
-    InlineComponent
+    InlineComponent,
+    DirectivesComponent,
+    PipesComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    SharedModule
   ],
   providers: [],
   bootstrap: [AppComponent]//[ManualComponent] //to bootstrap manualcomponent

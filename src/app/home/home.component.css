@@ -2,3 +2,9 @@ p {
   text-align: center;
   color : crimson;
 }
+button {
+  border: 1em black solid;
+}
+a {
+  display: block;
+}

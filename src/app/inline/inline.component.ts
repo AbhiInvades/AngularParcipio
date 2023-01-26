@@ -9,11 +9,17 @@ declare function randoThron():any;
 export class InlineComponent implements OnInit {
   public num:any;
   constructor() {
-    this.num = randoThron();
+    this.num = Math.round( randoThron());
    }
 
   ngOnInit(): void {
+   this.rt()
+  }
 
+   rt() {
+    setTimeout(()=>{
+      this.num = Math.round( randoThron())
+    }, 1000)
   }
 
 }
