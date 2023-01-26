@@ -5,6 +5,7 @@ import { DirectivesComponent } from './directives/directives.component';
 import { HomeComponent } from './home/home.component';
 import { InlineComponent } from './inline/inline.component';
 import { ManualComponent } from './manual_component/manual.component';
+import { ParentComponent } from './parent/parent.component';
 import { PipesComponent } from './pipes/pipes.component';
 
 const routes: Routes = [
@@ -14,7 +15,8 @@ const routes: Routes = [
   {
     path:"directive", component:DirectivesComponent
   },
-  {path:"pipes", component:PipesComponent}
+  {path:"pipes", component:PipesComponent},
+  {path:"passdata", component:ParentComponent}
 ];
 
 @NgModule({

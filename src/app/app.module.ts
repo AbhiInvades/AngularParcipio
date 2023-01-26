@@ -10,6 +10,9 @@ import { ManualComponent } from './manual_component/manual.component';
 import { SharedModule } from './shared/shared.module';
 import { DirectivesComponent } from './directives/directives.component';
 import { PipesComponent } from './pipes/pipes.component';
+import { CpipePipe } from './cpipe.pipe';
+import { ParentComponent } from './parent/parent.component';
+import { ChildComponent } from './child/child.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +21,10 @@ import { PipesComponent } from './pipes/pipes.component';
     NavbarComponent,
     InlineComponent,
     DirectivesComponent,
-    PipesComponent
+    PipesComponent,
+    CpipePipe,
+    ParentComponent,
+    ChildComponent
   ],
   imports: [
     BrowserModule,
