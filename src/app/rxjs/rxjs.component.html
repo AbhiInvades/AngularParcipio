@@ -1,0 +1,7 @@
+<p>rxjs works!</p>
+<div *ngIf="showFilter">
+  <input type="text" (keyup)="applyFilter($event)">
+  <button (click)="filterReset()">Clear Filter</button>
+</div>
+<div *ngFor="let user of users | paginate: {itemsPerPage:itemsToDisplay, currentPage:page}"><p>{{user.name}}<p style="margin-left: 5em;">{{user.summary}}</p></div>
+<pagination-controls (pageChange)="pageChanged($event)"></pagination-controls>

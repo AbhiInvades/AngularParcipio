@@ -8,3 +8,21 @@ button {
 a {
   display: block;
 }
+
+table, th, td {
+  border: 1px solid black;
+  margin: inherit;
+  text-align: center;
+
+}
+
+tr td:last-child {
+  width: 1%;
+  white-space: nowrap;
+}
+
+table {
+  table-layout: fixed;
+}
+
+

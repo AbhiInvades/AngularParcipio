@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { CpipePipe } from '../cpipe.pipe';
+import { CpipePipe } from './cpipe.pipe';
 
 @Component({
   selector: 'app-pipes',

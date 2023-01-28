@@ -25,6 +25,6 @@ export class ChildComponent {
   }
 
   child_says(){
-    console.log("hello")
+    console.log("hello using viewchild")
   }
 }
