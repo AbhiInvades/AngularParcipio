@@ -1,0 +1,53 @@
+<p>forms works!</p>
+<div *ngIf="this.path == pathEnum.twowaybind">
+  <input type="text" [(ngModel)]="twoWayB">
+  <p>{{twoWayB}}</p>
+
+</div>
+
+<div *ngIf="this.path == pathEnum.forms">
+  <form #customerForm="ngForm" (ngSubmit)="onSubmit(customerForm)">
+    <div> Name : <input type="text" [(ngModel)]="name" name="name"></div>
+    <div>Password : <input type="password" [(ngModel)]="password" name="password"></div>
+    <div>Date of Birth : <input type="date" [(ngModel)]="dob" name="dob"></div>
+    <div>About : <input type="textArea" [(ngModel)]="summary" name="summary"></div>
+    <div>Known Languages :
+      Marathi <input type="checkbox" [checked]="saveMarathi" (change)="saveMarathi = !saveMarathi" [(ngModel)]="saveMarathi" name="saveMarathi"/>
+      English <input type="checkbox" [checked]="saveEnglish" (change)="saveEnglish = !saveEnglish" [(ngModel)]="saveEnglish" name="saveEnglish"/>
+    </div>
+    <div>Are you Indian? <input type="checkbox" [(ngModel)]="isIndian" name="isIndian"></div>
+    <button type="submit">Register</button>
+  </form>
+</div>
+
+<div *ngIf="this.path == pathEnum.delete">
+  Id of object to be deleted : <input type="text" [(ngModel)]="key">
+  <button (click) ="delete()">Delete</button>
+</div>
+
+<div *ngIf="this.path == pathEnum.caching">
+  <div *ngFor="let user of users"><p>{{user.name}}<p style="margin-left: 5em;">{{user.summary}}</p></div>
+</div>
+
+<div *ngIf="this.path == pathEnum.dotnet">
+  <form #customerForm="ngForm" (ngSubmit)="submit(customerForm)">
+
+    <div>
+      Last name : <input type="text"  name="LastName" ngModel>
+    </div>
+    <div>
+      First name : <input type="text" name="FirstMidName" ngModel>
+    </div>
+    <div>
+      Enrollemnt Date : <input type="date"  name="EnrollemntDate" ngModel>
+    </div>
+    <div>
+      <button type="submit">Register Using Dotnet API</button>
+    </div>
+
+  </form>
+
+  <div *ngFor="let user of dotnetUsers"><p>{{user.FirstMidName}}</p></div>
+</div>
+
+
